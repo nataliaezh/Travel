@@ -1,0 +1,43 @@
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+
+# Project exclude paths
+/auth-server/target/
+/common/target/
+/config-server/target/
+/dto-common/target/
+/dto-consumer/target/
+/dto-producer/target/
+/eureka-oauth2-feign-client/target/
+/hystrix-client/target/
+/not-cloud-rest-service/target/
+/secured-client/target/
+/statistic-chain-service/target/
+/zuul-server/target/

@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  eureka:
+    build:
+      context: ./eureka-service
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    ports:
+      - "8761:8761"
+  client:
+    build:
+      context: ./eureka-client
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    ports:
+      - "9872:9872"
+    links:
+      - eureka
+  feign-client:
+    build:
+      context: ./eureka-feign-client
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    ports:
+      - "8190:8190"
+    links:
+      - eureka
